@@ -1,0 +1,22 @@
+{
+    "name": "mlaxwong/paw-project",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mlax Wong",
+            "email": "mlaxwong@gmail.com"
+        }
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "project\\": "src/"
+        }
+    },
+    "require": {
+        "mlaxwong/paw-cp": "dev-master"
+    }
+}
