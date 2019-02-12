@@ -1,6 +1,7 @@
 <?php
 return [
     'basePath' => PATH_BASE,
+    'vendorPath' => PATH_VENDOR,
     'modules' => [
         'admin' => paw\cp\Module::class
     ],
@@ -9,7 +10,7 @@ return [
     ],
     'components' => [
         'request' => [
-            'cookieValidationKey' => 'NrhetzCJL9wRQemdpHT4GL3zyvZmAuTc'
+            'cookieValidationKey' => 'k1224gG8jzgLGVP0Psvt3I-s8_3OvWdd'
         ],
         'view' => [
             'defaultExtension' => 'twig',

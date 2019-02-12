@@ -5,6 +5,9 @@ $init = [
         'runtime',
         'web/assets',
     ],
+    'setCookieValidationKey' => [
+        'config/config.php',
+    ],
 ];
 
 $root = __DIR__;
