@@ -9,11 +9,13 @@ return [
         '@runtime' => PATH_ROOT . '/runtime',
     ],
     'components' => [
+        'assetManager' => [
+            'linkAssets' => true,
+        ],
         'request' => [
             'cookieValidationKey' => 'k1224gG8jzgLGVP0Psvt3I-s8_3OvWdd'
         ],
         'view' => [
-            'defaultExtension' => 'twig',
             'renderers' => [
                 'twig' => [
                     'class' => \paw\cp\twig\ViewRenderer::class,
@@ -25,6 +27,9 @@ return [
                     'extensions' => YII_DEBUG ? ['\Twig_Extension_Debug'] : [],
                     'globals' => [
                         'html' => ['class' => \yii\helpers\Html::class],
+                    ],
+                    'functions' => [
+                        't' => 'Yii::t',
                     ],
                     'uses' => ['yii\bootstrap'],
                 ],

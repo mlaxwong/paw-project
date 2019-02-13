@@ -271,16 +271,16 @@
         },
         {
             "name": "mlaxwong/paw",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mlaxwong/paw.git",
-                "reference": "ed7ccfd021bf575a0ed0dbc6d759690f9d893818"
+                "reference": "8d82510fac07db58580e7292b7a69e6468aa5dab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mlaxwong/paw/zipball/ed7ccfd021bf575a0ed0dbc6d759690f9d893818",
-                "reference": "ed7ccfd021bf575a0ed0dbc6d759690f9d893818",
+                "url": "https://api.github.com/repos/mlaxwong/paw/zipball/8d82510fac07db58580e7292b7a69e6468aa5dab",
+                "reference": "8d82510fac07db58580e7292b7a69e6468aa5dab",
                 "shasum": ""
             },
             "require": {
@@ -313,7 +313,7 @@
                 }
             ],
             "description": "Paw Yii2 Framework",
-            "time": "2019-02-12T15:24:22+00:00"
+            "time": "2019-02-13T08:11:13+00:00"
         },
         {
             "name": "mlaxwong/paw-bootstrap4",
@@ -358,12 +358,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mlaxwong/paw-cp.git",
-                "reference": "ae06b342ad8070dcc715544774e115a18e3b4dc1"
+                "reference": "043f228a36868204ac30f7158ce4d881cb09e9a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mlaxwong/paw-cp/zipball/ae06b342ad8070dcc715544774e115a18e3b4dc1",
-                "reference": "ae06b342ad8070dcc715544774e115a18e3b4dc1",
+                "url": "https://api.github.com/repos/mlaxwong/paw-cp/zipball/043f228a36868204ac30f7158ce4d881cb09e9a9",
+                "reference": "043f228a36868204ac30f7158ce4d881cb09e9a9",
                 "shasum": ""
             },
             "require": {
@@ -387,7 +387,7 @@
                     "email": "mlaxwong@gmail.com"
                 }
             ],
-            "time": "2019-02-12T15:36:01+00:00"
+            "time": "2019-02-13T09:13:06+00:00"
         },
         {
             "name": "npm-asset/bootstrap",
