@@ -5,6 +5,10 @@ $init = [
         'runtime',
         'web/assets',
     ],
+    'setExecutable' => [
+        'yii',
+        'yii.bat',
+    ],
     'setCookieValidationKey' => [
         'config/config.php',
     ],
