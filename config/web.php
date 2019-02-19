@@ -26,6 +26,15 @@ return [
                     ],
                     'functions' => [
                         't' => 'Yii::t',
+                        'setTitle' => function ($title) {
+                            Yii::$app->view->title = $title;
+                        },
+                        'setParams' => function ($key, $value) {
+                            Yii::$app->view->params[$key] = $value;
+                        },
+                        'getParams' => function ($key, $defaultValue = null) {
+                            return isset(Yii::$app->view->params[$key]) ? Yii::$app->view->params[$key] : $defaultValue;
+                        }
                     ],
                     'uses' => ['yii\bootstrap'],
                 ],
