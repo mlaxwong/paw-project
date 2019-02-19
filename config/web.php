@@ -12,6 +12,9 @@ return [
             'cookieValidationKey' => 'k1224gG8jzgLGVP0Psvt3I-s8_3OvWdd'
         ],
         'view' => [
+            'theme' => [
+                'asset' => \app\assets\AppAsset::class,
+            ],
             'renderers' => [
                 'twig' => [
                     'class' => \paw\cp\twig\ViewRenderer::class,

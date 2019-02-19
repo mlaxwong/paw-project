@@ -3,6 +3,7 @@ return [
     'basePath' => PATH_BASE,
     'vendorPath' => PATH_VENDOR,
     'aliases' => [
+        '@root' => PATH_ROOT,
         '@runtime' => PATH_ROOT . '/runtime',
     ],
     'components' => [
