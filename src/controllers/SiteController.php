@@ -33,4 +33,9 @@ class SiteController extends Controller
 
         return $this->render('index');
     }
+
+    public function actionHosting()
+    {
+        return $this->render('hosting');
+    }
 }

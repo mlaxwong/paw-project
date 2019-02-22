@@ -18,6 +18,7 @@
     },
     "require": {
         "mlaxwong/paw-cp": "dev-master",
+        "npm-asset/font-awesome": "^5.7",
         "vlucas/phpdotenv": "^3.3"
     }
 }

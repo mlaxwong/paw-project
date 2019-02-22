@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d59c2cdda0661e8e35460292588617d4",
+    "content-hash": "0b0547b86b658c2a2460c1241c6a712d",
     "packages": [
         {
             "name": "bower-asset/inputmask",
@@ -553,6 +553,22 @@
                 "vanilla js"
             ],
             "time": "2019-02-01T15:21:33+00:00"
+        },
+        {
+            "name": "npm-asset/font-awesome",
+            "version": "5.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FortAwesome/Font-Awesome.git",
+                "reference": "1cf1062e0cfda5e9b5b2cac7844721b345e1a9c5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/1cf1062e0cfda5e9b5b2cac7844721b345e1a9c5",
+                "reference": "1cf1062e0cfda5e9b5b2cac7844721b345e1a9c5",
+                "shasum": ""
+            },
+            "type": "npm-asset-library"
         },
         {
             "name": "nterms/yii2-mailqueue",

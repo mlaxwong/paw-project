@@ -37,7 +37,7 @@ return [
                         },
                         'getParams' => function ($key, $defaultValue = null) {
                             return isset(Yii::$app->view->params[$key]) ? Yii::$app->view->params[$key] : $defaultValue;
-                        }
+                        },
                     ],
                     'uses' => ['yii\bootstrap'],
                 ],
@@ -45,7 +45,15 @@ return [
         ],
         'urlManager' => [
             'rules' => [
-                '<handle:^((?!admin)(?!test))[\w-\/]+>' => 'site/index',
+                // '<handle:^((?!admin)(?!test))[\w-\/]+>' => 'site/index',
+                // '<action:^((?!admin)(?!test))[\w-\/]+>' => 'site/<action>',
+                // '<controller:^((?!admin)(?!test))[\w-\/]+>/<action>' => '<controller>/index',
+                // '<module:^((?!admin)(?!test))[\w-\/]+>/<controller>/<action>' => 'site/index',
+
+                '<action^((?!admin)(?!test))[\w-]+>' => 'site/<action>',
+                '<controller>/<action>' => '<controller>/<action>',
+                '<module>/<controller>/<action>' => '<module>/<controller>/<action>',
+
             ],
         ],
     ],

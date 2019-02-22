@@ -16,5 +16,6 @@ class AppAsset extends AssetBundle
     public $depends = [
         \paw\bootstrap4\BootstrapAsset::class,
         \app\assets\StaticAsset::class,
+        \app\assets\FontAwsomeAsset::class,
     ];
 }
