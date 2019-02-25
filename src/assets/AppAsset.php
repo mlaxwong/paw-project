@@ -11,7 +11,6 @@ class AppAsset extends AssetBundle
     ];
 
     public $js = [
-        'main.js'
     ];
 
     public $depends = [
