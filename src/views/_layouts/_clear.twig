@@ -1,10 +1,13 @@
+{% set pageTitle = this.title ?? t('app', 'Web & Mobile Development Company in Penang') %}
+{% set companyName = t('app', 'Trinalusion') %}
+{% set fullPageTitle = string.strtr('{title} | {company}', {title: pageTitle, company:companyName}) %}
 {{- void(this.beginPage()) -}}
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="{{ app.language }}">
 <head>
     <meta charset="{{ app.charset }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ html.encode(this.title) }}</title>
+    <title>{{ fullPageTitle|e }}</title>
     {{ this.head() }}
     {{ html.csrfMetaTags() | raw }}
 </head>

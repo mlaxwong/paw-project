@@ -28,6 +28,7 @@ return [
                     'extensions' => YII_DEBUG ? ['\Twig_Extension_Debug'] : [],
                     'globals' => [
                         'html' => ['class' => \yii\helpers\Html::class],
+                        'string' => ['class' => \paw\helpers\StringHelper::class],
                     ],
                     'functions' => [
                         't' => 'Yii::t',

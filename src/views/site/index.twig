@@ -1,31 +1,36 @@
-{{- beginBlock('mlax-sub') -}}
-no lehasdas
+{{- beginBlock('banner') -}}
+<h1>{{ t('app', 'Website & Mobile') }}<br /><small class="text-muted">{{ t('app', 'Design and Development') }}</small></h1>
+<p>{{ t('app', 'We provide custom design and development solution in Penang, Malaysia.') }}</p>
 {{- endBlock() -}}
-<section class="website">
-    <div class="container py-3">
-        <h1 class="display-4">Website Design & Development</h1>
-        <p class="lead">
-            Looking for custom website design or custom web development?    
-        </p>
-        <a href="{{ url(['/website']) }}" class="btn btn-primary">Learn More</a>
+<section class="section-services">
+    <div class="website">
+        <div class="container py-3">
+            <h1 class="display-4">{{ t('app', 'Website Design & Development') }}</h1>
+            <p class="lead">
+                {{ t('app', 'Looking for custom website design or custom web development?') }}    
+            </p>
+            <a href="{{ url(['/website']) }}" class="btn btn-primary">{{ t('app', 'Learn More') }}</a>
+        </div>
+    </div>
+    <div class="mobile-app">
+        <div class="container py-3 text-right">
+            <h1 class="display-4">{{ t('app', 'Mobile Apps') }}</h1>
+            <p class="lead">
+                {{ t('app', 'Looking for custom website design or custom web development?') }}    
+            </p>
+            <a href="{{ url(['/website']) }}" class="btn btn-primary">{{ t('app', 'Learn More') }}</a>
+        </div>
+    </div>
+    <div class="hosting">
+        <div class="container py-3">
+            <h1 class="display-4">{{ t('app', 'Shared Hosting') }}</h1>
+            <p class="lead">
+                {{ t('app', 'Easy and affordable shared hosting.<br />
+                Starting at only <b>{price}</b>', {price: 'RM15.00/mo'})|raw }}
+            </p>
+            <a href="{{ url(['/hosting']) }}" class="btn btn-primary">{{ t('app', 'Learn More') }}</a>
+        </div>
     </div>
 </section>
-<section class="mobile-app">
-    <div class="container py-3 text-right">
-        <h1 class="display-4">Mobile Apps</h1>
-        <p class="lead">
-            Looking for custom website design or custom web development?    
-        </p>
-        <a href="{{ url(['/website']) }}" class="btn btn-primary">Learn More</a>
-    </div>
-</section>
-<section class="hosting">
-    <div class="container py-3">
-        <h1 class="display-4">Shared Hosting</h1>
-        <p class="lead">
-            Easy and affordable shared hosting.<br />
-            Starting at only <b>RM15.00/mo</b>
-        </p>
-        <a href="{{ url(['/hosting']) }}" class="btn btn-primary">Learn More</a>
-    </div>
-</section>
+<section class="section-why"></section>
+<section class="section-our-works"></section>

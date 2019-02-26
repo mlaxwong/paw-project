@@ -2,7 +2,7 @@
 
 {% block body %}
     <div class="global-wrapper">
-        <header>
+        <header id="master-header">
             {{- beginBlock('header', true) -}}
             <nav class="navbar fixed-top navbar-expand-lg navbar-light px-0">
                 <div class="container">
@@ -27,9 +27,31 @@
             {{- endBlock() -}}
         </header>
         <main>
-            <div class="container">
-                {{ content | raw }}
-            </div>
+            {{ content | raw }}
+            {{- beginBlock('section-contact', true) -}}
+            <section class="section-contact">
+                <div class="container text-center">
+                    <h2>{{ t('app', 'Let\'s get in touch') }}</h2>
+                    <form class="col-md-8 offset-md-2">
+                        <div class="form-row">
+                            <div class="col form-label-group">
+                                <input id="name" type="text" class="form-control" placeholder="{{ t('app', 'Your full name') }}"/>
+                                <label class="text-left" for="name">{{ t('app', 'Your full name') }}</label>
+                            </div>
+                            <div class="col form-label-group">
+                                <input id="email" type="text" class="form-control" placeholder="{{ t('app', 'Your email address') }}"/>
+                                <label class="text-left" for="email">{{ t('app', 'Your email address') }}</label>
+                            </div>
+                        </div>
+                        <div class="form-label-group">
+                            <textarea id="message" class="form-control" placeholder="{{ t('app', 'Additional Message') }}"></textarea>
+                            <label class="text-left" for="message">{{ t('app', 'Additional Message') }}</label>
+                        </div>
+                        <button class="btn btn-primary">{{ t('app', 'Submit') }}</button>
+                    </form>
+                </div>
+            </section>
+            {{- endBlock() -}}
         </main>
         <footer>
             <div>
@@ -63,5 +85,8 @@
                 </div>
             </div>
         </footer>
+    </div>
+    <div id="preloader" class="preloader fade show">
+        <h1>Trinalusion</h1>
     </div>
 {% endblock %}

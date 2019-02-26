@@ -16,6 +16,15 @@
             "app\\": "src/"
         }
     },
+    "scripts": {
+        "build:frontend": [
+            "npm i",
+            "npm run build"
+        ],
+        "build": [
+            "@build:frontend"
+        ]
+    },
     "require": {
         "mlaxwong/paw-cp": "dev-master",
         "npm-asset/aos": "^2.3",
