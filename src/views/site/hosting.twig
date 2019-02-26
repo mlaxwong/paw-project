@@ -2,62 +2,67 @@
 {{- beginBlock('banner') -}}
 <h1>Linux Shared Hosting<br /><small class="text-muted">Easy & Affordable</small></h1>
 {{- endBlock() -}}
-<div>
-    <div class="row">
-        <div class="col-md-4">
-            <div class="mr-2 mb-5 p-2 text-center border">
-                <h3>Basic</h3>
-                <h4>RM15.00<small class="text-muted">/mo</small></h4>
-                <p><del>Normally RM35.00</del></p>
-                
-                <div class="px-5 py-3">
-                    <button class="btn btn-primary btn-block">Select</button>
-                </div>
-                <div class="spec">
-                    <div class="py-2">10GB Disk Space</div>
-                    <div class="py-2">20GB Monthly Data Transfer</div>
-                    <div class="py-2">10 Email Accounts</div>
-                    <div class="py-2">10 Subdomain</div>
-                    <div class="py-2">0 Addon Domain</div>
-                    <div class="py-2">10 Parked Domain</div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="mr-2 mb-5 p-2 text-center border border-dark">
-                <h3>Plus</h3>
-                <h4>RM20.00<small class="text-muted">/mo</small></h4>
-                <p><del>Normally RM50.00</del></p>
-                <div class="px-5 py-3">
-                    <button class="btn btn-primary btn-block">Select</button>
-                </div>
-                <div class="spec">
-                    <div class="py-2">50GB Disk Space</div>
-                    <div class="py-2">100GB Monthly Data Transfer</div>
-                    <div class="py-2">Unlimited Email Accounts</div>
-                    <div class="py-2">10 Subdomain</div>
-                    <div class="py-2">10 Addon Domain</div>
-                    <div class="py-2">50 Parked Domain</div>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="mr-2 mb-5 p-2 text-center border">
+                    <h3>{{ t('app', 'Basic') }}</h3>
+                    <h4>RM15.00<small class="text-muted">/mo</small></h4>
+                    <p><del>{{ t('app', 'Normally {price}', {price: 'RM35.00'}) }}</del></p>
+                    
+                    <div class="px-5 py-3">
+                        <button class="btn btn-primary btn-block">{{ t('app', 'Select') }}</button>
+                    </div>
+                    <div class="spec">
+                        <div class="py-2">{{ t('app', 'Domain not included*') }}</div>
+                        <div class="py-2">{{ t('app', '{unit} Disk Space', {unit: '10GB'}) }}</div>
+                        <div class="py-2">{{ t('app', '{unit} Monthly Data Transfer', {unit: '20GB'}) }}</div>
+                        <div class="py-2">{{ t('app', '{unit} Email Accounts', {unit: '10'}) }}</div>
+                        <div class="py-2">{{ t('app', '{unit} Subdomain', {unit: '10'}) }}</div>
+                        <div class="py-2">{{ t('app', '{unit} Addon Domain', {unit: '0'}) }}</div>
+                        <div class="py-2">{{ t('app', '{unit} Parked Domain', {unit: '10'}) }}</div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="mr-2 mb-5 p-2 text-center border">
-                <h3>Pro</h3>
-                <h4>RM30.00<small class="text-muted">/mo</small></h4>
-                <p><del>Normally RM60.00</del></p>
-                <div class="px-5 py-3">
-                    <button class="btn btn-primary btn-block">Select</button>
+            <div class="col-md-4">
+                <div class="mr-2 mb-5 p-2 text-center border border-dark">
+                    <h3>Plus</h3>
+                    <h4>RM20.00<small class="text-muted">/mo</small></h4>
+                    <p><del>{{ t('app', 'Normally {price}', {price: 'RM50.00'}) }}</del></p>
+                    <div class="px-5 py-3">
+                        <button class="btn btn-primary btn-block">{{ t('app', 'Select') }}</button>
+                    </div>
+                    <div class="spec">
+                        <div class="py-2">{{ t('app', 'Domain not included*') }}</div>
+                        <div class="py-2">{{ t('app', '{unit} Disk Space', {unit: '50GB'}) }}</div>
+                        <div class="py-2">{{ t('app', '{unit} Monthly Data Transfer', {unit: '100GB'}) }}</div>
+                        <div class="py-2">{{ t('app', '{unit} Email Accounts', {unit: t('app', 'Unlimited')}) }}</div>
+                        <div class="py-2">{{ t('app', '{unit} Subdomain', {unit: '10'}) }}</div>
+                        <div class="py-2">{{ t('app', '{unit} Addon Domain', {unit: '10'}) }}</div>
+                        <div class="py-2">{{ t('app', '{unit} Parked Domain', {unit: '50'}) }}</div>
+                    </div>
                 </div>
-                <div class="spec">
-                    <div class="py-2">500GB Disk Space</div>
-                    <div class="py-2">500GB Monthly Data Transfer</div>
-                    <div class="py-2">Unlimited Email Accounts</div>
-                    <div class="py-2">10 Subdomain</div>
-                    <div class="py-2">50 Addon Domain</div>
-                    <div class="py-2">500 Parked Domain</div>
+            </div>
+            <div class="col-md-4">
+                <div class="mr-2 mb-5 p-2 text-center border">
+                    <h3>Pro</h3>
+                    <h4>RM30.00<small class="text-muted">/mo</small></h4>
+                    <p><del>{{ t('app', 'Normally {price}', {price: 'RM60.00'}) }}</del></p>
+                    <div class="px-5 py-3">
+                        <button class="btn btn-primary btn-block">{{ t('app', 'Select') }}</button>
+                    </div>
+                    <div class="spec">
+                        <div class="py-2">{{ t('app', 'Domain not included*') }}</div>
+                        <div class="py-2">{{ t('app', '{unit} Disk Space', {unit: '500GB'}) }}</div>
+                        <div class="py-2">{{ t('app', '{unit} Monthly Data Transfer', {unit: '500GB'}) }}</div>
+                        <div class="py-2">{{ t('app', '{unit} Email Accounts', {unit: t('app', 'Unlimited')}) }}</div>
+                        <div class="py-2">{{ t('app', '{unit} Subdomain', {unit: '10'}) }}</div>
+                        <div class="py-2">{{ t('app', '{unit} Addon Domain', {unit: '50'}) }}</div>
+                        <div class="py-2">{{ t('app', '{unit} Parked Domain', {unit: '500'}) }}</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>

@@ -32,20 +32,36 @@
             <section class="section-contact">
                 <div class="container text-center">
                     <h2>{{ t('app', 'Let\'s get in touch') }}</h2>
-                    <form class="col-md-8 offset-md-2">
+                    <form class="col-md-10 offset-md-1">
                         <div class="form-row">
                             <div class="col form-label-group">
-                                <input id="name" type="text" class="form-control" placeholder="{{ t('app', 'Your full name') }}"/>
-                                <label class="text-left" for="name">{{ t('app', 'Your full name') }}</label>
+                                <input id="form-contact-input-name" name="name" type="text" class="form-control" placeholder="{{ t('app', 'Your Full Name') }}"/>
+                                <label class="text-left" for="form-contact-input-name">{{ t('app', 'Your Full Name') }}</label>
                             </div>
                             <div class="col form-label-group">
-                                <input id="email" type="text" class="form-control" placeholder="{{ t('app', 'Your email address') }}"/>
-                                <label class="text-left" for="email">{{ t('app', 'Your email address') }}</label>
+                                <input id="form-contact-input-email" name="email" type="email" class="form-control" placeholder="{{ t('app', 'Your Email Address') }}"/>
+                                <label class="text-left" for="form-contact-input-email">{{ t('app', 'Your Email Address') }}</label>
                             </div>
                         </div>
-                        <div class="form-label-group">
-                            <textarea id="message" class="form-control" placeholder="{{ t('app', 'Additional Message') }}"></textarea>
-                            <label class="text-left" for="message">{{ t('app', 'Additional Message') }}</label>
+                        <div class="form-row">
+                                <div class="col form-label-group">
+                                    <input id="form-contact-input-contact" name="phone" type="tel" class="form-control" placeholder="{{ t('app', 'Your Contact Number') }}"/>
+                                    <label class="text-left" for="form-contact-input-contact">{{ t('app', 'Your Contact Number') }}</label>
+                                </div>
+                                <div class="col form-label-group">
+                                    <select name="location" id="form-contact-input-location" class="form-control">
+                                        <option value="">{{ t('app', '-- Select State --') }}</option>
+                                        <option value="Penang">Penang</option>
+                                        <option value="Kedah">Kedah</option>
+                                    </select>
+                                    <label class="text-left" for="form-contact-input-location">{{ t('app', 'Your Location') }}</label>
+                                </div>
+                            </div>
+                        <div class="form-row">
+                            <div class="col form-label-group">
+                                <textarea id="form-contact-input-message" name="message" class="form-control" placeholder="{{ t('app', 'Additional Message') }}" rows="5"></textarea>
+                                <label class="text-left" for="form-contact-input-message">{{ t('app', 'Additional Message') }}</label>
+                            </div>
                         </div>
                         <button class="btn btn-primary">{{ t('app', 'Submit') }}</button>
                     </form>
