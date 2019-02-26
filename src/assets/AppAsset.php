@@ -19,5 +19,6 @@ class AppAsset extends AssetBundle
         \paw\bootstrap4\BootstrapAsset::class,
         \app\assets\StaticAsset::class,
         \app\assets\FontAwsomeAsset::class,
+        \app\assets\AOSAsset::class,
     ];
 }

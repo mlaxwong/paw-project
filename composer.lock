@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0b0547b86b658c2a2460c1241c6a712d",
+    "content-hash": "495fa27fbc6ec34d8b288830ac71512d",
     "packages": [
         {
             "name": "bower-asset/inputmask",
@@ -390,6 +390,50 @@
             "time": "2019-02-19T06:23:41+00:00"
         },
         {
+            "name": "npm-asset/aos",
+            "version": "2.3.4",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/aos/-/aos-2.3.4.tgz",
+                "reference": null,
+                "shasum": "eb1c29f5c1806a197cf6323080747547edd3db8e"
+            },
+            "require": {
+                "npm-asset/classlist-polyfill": ">=1.0.3,<2.0.0",
+                "npm-asset/lodash.debounce": ">=4.0.6,<5.0.0",
+                "npm-asset/lodash.throttle": ">=4.0.1,<5.0.0"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-bugs": {
+                    "url": "https://github.com/michalsnik/aos/issues"
+                },
+                "npm-asset-main": "dist/aos.js",
+                "npm-asset-directories": [],
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "git+https://github.com/michalsnik/aos.git"
+                },
+                "npm-asset-scripts": {
+                    "test": "node ./node_modules/karma/bin/karma start karma.conf.js",
+                    "build": "webpack",
+                    "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michał Sajnóg",
+                    "email": "michal.sajnog@hotmail.com"
+                }
+            ],
+            "description": "Animate on scroll library",
+            "homepage": "https://michalsnik.github.io/aos/",
+            "time": "2018-10-03T22:15:22+00:00"
+        },
+        {
             "name": "npm-asset/bootstrap",
             "version": "4.3.1",
             "dist": {
@@ -555,6 +599,60 @@
             "time": "2019-02-01T15:21:33+00:00"
         },
         {
+            "name": "npm-asset/classlist-polyfill",
+            "version": "1.2.0",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/classlist-polyfill/-/classlist-polyfill-1.2.0.tgz",
+                "reference": null,
+                "shasum": "935bc2dfd9458a876b279617514638bcaa964a2e"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-bugs": {
+                    "url": "https://github.com/eligrey/classList.js/issues"
+                },
+                "npm-asset-main": "src/index.js",
+                "npm-asset-directories": {
+                    "test": "tests"
+                },
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "git+https://github.com/yola/classlist-polyfill.git"
+                },
+                "npm-asset-scripts": {
+                    "test": "bash ./script/test"
+                }
+            },
+            "license": [
+                "Unlicense"
+            ],
+            "authors": [
+                {
+                    "name": "Eli Grey",
+                    "email": "me@eligrey.com"
+                },
+                {
+                    "name": "Eli Grey",
+                    "email": "me@eligrey.com"
+                },
+                {
+                    "name": "Yola Engineering",
+                    "email": "engineers@yola.com",
+                    "url": "https://www.yola.com/"
+                }
+            ],
+            "description": "Cross-browser JavaScript shim that fully implements element.classList (referenced on MDN)",
+            "homepage": "https://github.com/yola/classlist-polyfill",
+            "keywords": [
+                "classList",
+                "cross-browser",
+                "polyfill",
+                "shim"
+            ],
+            "time": "2017-05-02T21:29:17+00:00"
+        },
+        {
             "name": "npm-asset/font-awesome",
             "version": "5.7.2",
             "source": {
@@ -569,6 +667,74 @@
                 "shasum": ""
             },
             "type": "npm-asset-library"
+        },
+        {
+            "name": "npm-asset/lodash.debounce",
+            "version": "4.17.11-patch1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lodash/lodash.git",
+                "reference": "3e273e915d1c4176a987fa6ad65e849f59d60453"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lodash/lodash/zipball/3e273e915d1c4176a987fa6ad65e849f59d60453",
+                "reference": "3e273e915d1c4176a987fa6ad65e849f59d60453",
+                "shasum": ""
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-main": "lodash.js",
+                "npm-asset-repository": "lodash/lodash",
+                "npm-asset-scripts": {
+                    "test": "echo \"See https://travis-ci.org/lodash-archive/lodash-cli for testing details.\""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                "John-David Dalton <john.david.dalton@gmail.com> (http://allyoucanleet.com/)",
+                "John-David Dalton <john.david.dalton@gmail.com> (http://allyoucanleet.com/)",
+                "Mathias Bynens <mathias@qiwi.be> (https://mathiasbynens.be/)"
+            ],
+            "description": "Lodash modular utilities.",
+            "homepage": "https://lodash.com/",
+            "time": "2018-09-12T05:12:11+00:00"
+        },
+        {
+            "name": "npm-asset/lodash.throttle",
+            "version": "4.17.11-patch1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lodash/lodash.git",
+                "reference": "3e273e915d1c4176a987fa6ad65e849f59d60453"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lodash/lodash/zipball/3e273e915d1c4176a987fa6ad65e849f59d60453",
+                "reference": "3e273e915d1c4176a987fa6ad65e849f59d60453",
+                "shasum": ""
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-main": "lodash.js",
+                "npm-asset-repository": "lodash/lodash",
+                "npm-asset-scripts": {
+                    "test": "echo \"See https://travis-ci.org/lodash-archive/lodash-cli for testing details.\""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                "John-David Dalton <john.david.dalton@gmail.com> (http://allyoucanleet.com/)",
+                "John-David Dalton <john.david.dalton@gmail.com> (http://allyoucanleet.com/)",
+                "Mathias Bynens <mathias@qiwi.be> (https://mathiasbynens.be/)"
+            ],
+            "description": "Lodash modular utilities.",
+            "homepage": "https://lodash.com/",
+            "time": "2018-09-12T05:12:11+00:00"
         },
         {
             "name": "nterms/yii2-mailqueue",
