@@ -8,9 +8,11 @@ class AppAsset extends AssetBundle
     public $sourcePath = '@root/dist';
 
     public $css = [
+        'asset.app.css',
     ];
-
+    
     public $js = [
+        'asset.app.js',
     ];
 
     public $depends = [

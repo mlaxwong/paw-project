@@ -30,12 +30,12 @@ class SiteController extends Controller
         // print_r($products);
         // print_r($resources->dataProvider->pagination->page);
         // die;    
-
         return $this->render('index');
     }
 
     public function actionHosting()
     {
+        
         return $this->render('hosting');
     }
 }

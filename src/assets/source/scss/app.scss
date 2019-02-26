@@ -1,0 +1,33 @@
+$header-banner-height: 580px;
+
+.global-wrapper
+{
+    min-height: 100vh;
+
+    header
+    {
+        position: relative;
+        min-height: $header-banner-height;
+        
+        .banner-wrapper
+        {
+            width: 100%;
+            min-height: $header-banner-height;
+            padding-top: 56px;
+            background-color: #ddd;
+            position: fixed;
+            z-index: -1;
+        }
+    }
+
+    main
+    {
+        background-color: #fff;
+        padding: 25px 0px;
+    }
+
+    footer
+    {
+
+    }
+}

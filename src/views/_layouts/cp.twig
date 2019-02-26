@@ -1,0 +1,41 @@
+{% extends 'base.twig' %}
+
+{% set fullPageForm = getParams('fullPageForm') %}
+
+{%- block body -%}
+    <div class="global-wrapper">
+        <div class="global-sidebar">
+            <nav>
+                <ul>
+                    <li><a href="{{ url(['/admin/']) }}">Dashboard</a></li>
+                    <li><a href="{{ url(['/admin/setting']) }}">Setting</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main-wrapper">
+            <header>
+                {% block header %}
+                    {% block pageTitle %}
+                        <h1>{{ this.title }}</h1>
+                    {% endblock %}
+                    {% block headerActions %}{% endblock %}
+                {% endblock %}
+            </header>
+            <main>
+                {%- if fullPageForm -%}
+                <form id="main-form" method="post" accept-charset="UTF-8">
+                <input type="hidden" name="_csrf" value="{{ app.request.getCsrfToken() }}" />
+                {% endif %}
+                <header>
+
+                </header>
+                <div class="main-content">
+                    {{- content | raw -}}
+                </div>
+                {% if fullPageForm %}
+                </form>
+                {% endif %}
+            </main>
+        </div>
+    </div>
+{%- endblock -%}

@@ -9,7 +9,6 @@ class FontAwsomeAsset extends AssetBundle
 
     public $css = [
         'css/all.css',
-        'css/brand.css',
     ];
 
     public $publishOptions = [

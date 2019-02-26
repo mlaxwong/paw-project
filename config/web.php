@@ -1,8 +1,10 @@
 <?php
 return [
     'layoutPath' => '@app/views/_layouts',
+    // 'layout' =>'@app/views/_layouts/main.twig',
     'modules' => [
-        'admin' => paw\cp\Module::class
+        'admin' => paw\cp\Module::class,
+        'test' => app\modules\site\Module::class
     ],
     'components' => [
         'assetManager' => [
@@ -38,6 +40,12 @@ return [
                         'getParams' => function ($key, $defaultValue = null) {
                             return isset(Yii::$app->view->params[$key]) ? Yii::$app->view->params[$key] : $defaultValue;
                         },
+                        'beginBlock' => function ($key, $isBase = false) {
+                            \app\widgets\Block::begin(compact('key', 'isBase'));
+                        },
+                        'endBlock' => function () {
+                            \app\widgets\Block::end();
+                        }
                     ],
                     'uses' => ['yii\bootstrap'],
                 ],
