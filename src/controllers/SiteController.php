@@ -33,9 +33,18 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
+    public function actionWebsite()
+    {
+        return $this->render('website');
+    }
+
+    public function actionMobileApp()
+    {
+        return $this->render('mobile-app');
+    }
+
     public function actionHosting()
     {
-        
         return $this->render('hosting');
     }
 }

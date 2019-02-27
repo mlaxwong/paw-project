@@ -8,8 +8,8 @@
                 <div class="container">
                     <a href="{{ url(['/']) }}" class="navbar-brand">Trinalusion</a>
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item"><a href="#" class="nav-link">{{ t('app', 'Website') }}</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">{{ t('app', 'Mobile APP') }}</a></li>
+                        <li class="nav-item"><a href="{{ url(['/website']) }}" class="nav-link">{{ t('app', 'Website') }}</a></li>
+                        <li class="nav-item"><a href="{{ url(['/mobile-app']) }}" class="nav-link">{{ t('app', 'Mobile APP') }}</a></li>
                         <li class="nav-item"><a href="{{ url(['/hosting']) }}" class="nav-link">{{ t('app', 'Hosting') }}</a></li>
                     </ul>
                     <ul class="navbar-nav">
@@ -30,37 +30,62 @@
             {{ content | raw }}
             {{- beginBlock('section-contact', true) -}}
             <section class="section-contact">
-                <div class="container text-center">
-                    <h2>{{ t('app', 'Let\'s get in touch') }}</h2>
+                <div class="container">
+                    <h2 class="text-center">{{ t('app', 'Let\'s get in touch') }}</h2>
                     <form class="col-md-10 offset-md-1">
                         <div class="form-row">
                             <div class="col form-label-group">
                                 <input id="form-contact-input-name" name="name" type="text" class="form-control" placeholder="{{ t('app', 'Your Full Name') }}"/>
-                                <label class="text-left" for="form-contact-input-name">{{ t('app', 'Your Full Name') }}</label>
+                                <label for="form-contact-input-name">{{ t('app', 'Your Full Name') }}</label>
                             </div>
                             <div class="col form-label-group">
                                 <input id="form-contact-input-email" name="email" type="email" class="form-control" placeholder="{{ t('app', 'Your Email Address') }}"/>
-                                <label class="text-left" for="form-contact-input-email">{{ t('app', 'Your Email Address') }}</label>
+                                <label for="form-contact-input-email">{{ t('app', 'Your Email Address') }}</label>
                             </div>
                         </div>
                         <div class="form-row">
-                                <div class="col form-label-group">
-                                    <input id="form-contact-input-contact" name="phone" type="tel" class="form-control" placeholder="{{ t('app', 'Your Contact Number') }}"/>
-                                    <label class="text-left" for="form-contact-input-contact">{{ t('app', 'Your Contact Number') }}</label>
+                            <div class="col form-label-group">
+                                <input id="form-contact-input-contact" name="phone" type="tel" class="form-control" placeholder="{{ t('app', 'Your Contact Number') }}"/>
+                                <label for="form-contact-input-contact">{{ t('app', 'Your Contact Number') }}</label>
+                            </div>
+                            <div class="col form-label-group">
+                                <select name="location" id="form-contact-input-location" class="form-control">
+                                    <option value="">{{ t('app', '-- Select State --') }}</option>
+                                    <option value="Penang">Penang</option>
+                                    <option value="Kedah">Kedah</option>
+                                </select>
+                                <label for="form-contact-input-location" onclick="document.getElementById('form-contact-input-location').click()">{{ t('app', 'Your Location') }}</label>
+                            </div>
+                        </div>
+
+                        <span class="d-block pb-2">{{ t('app', 'How can we help you?') }}</span>
+
+                        <div class="form-row pb-3 px-1">
+                            <div class="col">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="form-contact-input-interest-website" />
+                                    <label for="form-contact-input-interest-website" class="custom-control-label">{{ t('app', 'Website Development') }}</label>
                                 </div>
-                                <div class="col form-label-group">
-                                    <select name="location" id="form-contact-input-location" class="form-control">
-                                        <option value="">{{ t('app', '-- Select State --') }}</option>
-                                        <option value="Penang">Penang</option>
-                                        <option value="Kedah">Kedah</option>
-                                    </select>
-                                    <label class="text-left" for="form-contact-input-location">{{ t('app', 'Your Location') }}</label>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="form-contact-input-interest-mobile" />
+                                    <label for="form-contact-input-interest-mobile" class="custom-control-label">{{ t('app', 'Mobile App Development') }}</label>
                                 </div>
                             </div>
+                            <div class="col">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="form-contact-input-interest-hosting" />
+                                    <label for="form-contact-input-interest-hosting" class="custom-control-label">{{ t('app', 'Share Hosting') }}</label>
+                                </div>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="form-contact-input-interest-consultation" />
+                                    <label for="form-contact-input-interest-consultation" class="custom-control-label">{{ t('app', 'Strategic Consultation') }}</label>
+                                </div>
+                            </div>
+                        </div>
                         <div class="form-row">
                             <div class="col form-label-group">
                                 <textarea id="form-contact-input-message" name="message" class="form-control" placeholder="{{ t('app', 'Additional Message') }}" rows="5"></textarea>
-                                <label class="text-left" for="form-contact-input-message">{{ t('app', 'Additional Message') }}</label>
+                                <label for="form-contact-input-message">{{ t('app', 'Additional Message') }}</label>
                             </div>
                         </div>
                         <button class="btn btn-primary">{{ t('app', 'Submit') }}</button>
