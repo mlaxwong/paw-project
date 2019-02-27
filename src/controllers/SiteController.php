@@ -47,4 +47,9 @@ class SiteController extends Controller
     {
         return $this->render('hosting');
     }
+
+    public function actionContact()
+    {
+        return $this->render('contact');
+    }
 }

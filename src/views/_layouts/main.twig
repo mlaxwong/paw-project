@@ -1,15 +1,26 @@
 {% extends 'base.twig' %}
 
+{% set enableMap = getParams('enable-map', false) %}
+{% set enableFullContactDetails = getParams('enable-full-contact-details', false) %}
+
 {% block body %}
     <div class="global-wrapper">
         <header id="master-header">
             {{- beginBlock('header', true) -}}
+            <div class="notification alert alert-dismissible fade show" role="alert">
+                <div class="container">
+                    {{ t('app', '<i class="fa fa-exclamation-triangle"></i> This website is under development')|raw }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
             <nav class="navbar fixed-top navbar-expand-lg navbar-light px-0">
                 <div class="container">
                     <a href="{{ url(['/']) }}" class="navbar-brand">Trinalusion</a>
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item"><a href="{{ url(['/website']) }}" class="nav-link">{{ t('app', 'Website') }}</a></li>
-                        <li class="nav-item"><a href="{{ url(['/mobile-app']) }}" class="nav-link">{{ t('app', 'Mobile APP') }}</a></li>
+                        <li class="nav-item"><a href="{{ url(['/mobile-app']) }}" class="nav-link">{{ t('app', 'Mobile App') }}</a></li>
                         <li class="nav-item"><a href="{{ url(['/hosting']) }}" class="nav-link">{{ t('app', 'Hosting') }}</a></li>
                     </ul>
                     <ul class="navbar-nav">
@@ -32,7 +43,12 @@
             <section class="section-contact">
                 <div class="container">
                     <h2 class="text-center">{{ t('app', 'Let\'s get in touch') }}</h2>
+                    <p class="text-center">{{ t('app', 'Don\'t know where to start? We are find to find a solution for you.') }}</p>
+                    {% if enableFullContactDetails %}
+                    <form class="col-md-12">
+                    {% else %}
                     <form class="col-md-10 offset-md-1">
+                    {% endif %}
                         <div class="form-row">
                             <div class="col form-label-group">
                                 <input id="form-contact-input-name" name="name" type="text" class="form-control" placeholder="{{ t('app', 'Your Full Name') }}"/>
@@ -92,17 +108,24 @@
                     </form>
                 </div>
             </section>
+            {% if enableMap %}
+            <section class="section-map pb-0 mb-0">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d767.150697040023!2d100.28632754116911!3d5.325608025496038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ac06bb47deb67%3A0x59eec7d2bc36769!2sSuntech!5e0!3m2!1sen!2smy!4v1551257483146" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen class="map"></iframe>
+            </section>
+            {% endif %}
             {{- endBlock() -}}
         </main>
         <footer>
-            <div>
+            <div class="footer-content py-5">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8">
                             <nav>
-                                <h5>{{ t('app', 'Navigation')}}</h5>
-                                <ul>
-                                    <li><a href="{{ url(['/']) }}">{{ t('app', 'Home') }}</a></li>
+                                <ul class="list-unstyled">
+                                    <li class="py-1"><a href="{{ url(['/']) }}">{{ t('app', 'Home') }}</a></li>
+                                    <li class="py-1"><a href="{{ url(['/website']) }}">{{ t('app', 'Website') }}</a></li>
+                                    <li class="py-1"><a href="{{ url(['/mobile-app']) }}">{{ t('app', 'Mobile App') }}</a></li>
+                                    <li class="py-1"><a href="{{ url(['/hosting']) }}">{{ t('app', 'Hosting') }}</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -111,14 +134,16 @@
                             <div>
                                 <i class="fa fa-phone"></i> <a href="tel:+60175858695">+6017-585 8605</a>
                             </div>
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-google"></i></a>
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fab fa-google"></i></a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div>
+            <div class="footer-bottom">
                 <div class="container text-center py-1">
                     <small class="px-2 border-right">{{ t('app', 'Copyright &copy; {year} Trinalusion all rights reserved', {year: "now"|date('Y')})|raw }}</small>
                     <small class="px-2 border-right"><a href="{{ url(['/privacy-policy']) }}">{{ t('app', 'Privacy Policy') }}</a></small>
