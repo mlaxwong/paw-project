@@ -34,8 +34,8 @@ const bodyScrolledClass = () => {
   }
 
   // events
-  window.onscroll = windowScollHandle
-  window.onresize = windowScollHandle
+  window.addEventListener('scroll', windowScollHandle)
+  window.addEventListener('resize', windowScollHandle)
 
   // init
   init()
@@ -52,3 +52,37 @@ const preloader = () => {
   }, 250)
 }
 preloader()
+
+const parallax = () => {
+  // vars
+  const parallaxEffectDefaultValue = 0.8
+
+  // elements
+  const $elements = document.querySelectorAll('[parallax]')
+
+  // methods
+  const windowScollParallaxHandle = () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+
+    $elements.forEach($element => {
+      const parallaxEffectValue = $element.getAttribute('parallax') ? $element.getAttribute('parallax') : parallaxEffectDefaultValue
+      console.log(parallaxEffectValue)
+      const elementPosition = scrollTop - $element.offsetTop
+      const parallaxEffect = elementPosition * parallaxEffectValue
+      const ty = parallaxEffect - elementPosition
+      $element.style.transform = 'translate3d(0px, ' + ty + 'px , 0px)'
+    })
+  }
+
+  const init = () => {
+    windowScollParallaxHandle()
+  }
+
+  // events
+  window.addEventListener('scroll', windowScollParallaxHandle)
+  window.addEventListener('resize', windowScollParallaxHandle)
+
+  // init
+  init()
+}
+parallax()
