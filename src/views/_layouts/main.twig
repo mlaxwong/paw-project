@@ -17,7 +17,9 @@
             </div> #}
             <nav class="navbar fixed-top navbar-expand-lg navbar-light px-0">
                 <div class="container">
-                    <a href="{{ url(['/']) }}" class="navbar-brand">Trinalusion</a>
+                    <a href="{{ url(['/']) }}" class="navbar-brand">
+                        <img src="{{ url(['/static/images/logo.png']) }}" alt="Trinalusion" />
+                    </a>
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item"><a href="{{ url(['/website']) }}" class="nav-link">{{ t('app', 'Website') }}</a></li>
                         <li class="nav-item"><a href="{{ url(['/mobile-app']) }}" class="nav-link">{{ t('app', 'Mobile App') }}</a></li>

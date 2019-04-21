@@ -4,9 +4,44 @@ $base-background-color: #333;
 $header-banner-height: 580px;
 $notification-height: 35px;
 
+$color-scheme-1: #800000;
+$color-scheme-2: #be1e2d;
+$color-scheme-3: #ed1c24;
+
 body 
 {
     background-color: $base-background-color;
+
+    .btn
+    {
+        border-radius: 0px;
+    }
+
+    .btn.btn-primary
+    {
+        background-color: $color-scheme-1;
+        border-color: $color-scheme-2;
+    }
+
+    .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+        color: #fff;
+        background-color: $color-scheme-2;
+        border-color: $color-scheme-3;
+        box-shadow: 0 0 0 0.2rem rgba($color-scheme-3, 0.5);
+    }
+
+    .btn:focus, .btn.focus, .btn-primary:focus, .btn-primary.focus {
+        box-shadow: 0 0 0 0.2rem rgba($color-scheme-3, 0.5);
+    }
+
+    .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus {
+        box-shadow: 0 0 0 0.2rem rgba($color-scheme-3, 0.5);
+    }
+
+    a
+    {
+        color: $color-scheme-1;
+    }
 
     section.bg-color-primary-3
     {
@@ -88,6 +123,11 @@ body
                 @include vendor-prefix(transition, padding-top 0.5s);
                 @include vendor-prefix(transition, box-shadow 0.5s);
                 @include vendor-prefix(box-shadow, none);
+
+                .navbar-brand img
+                {
+                    width:200px;
+                }
             }
 
             div.notification + nav
