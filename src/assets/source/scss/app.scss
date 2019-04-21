@@ -7,6 +7,11 @@ $notification-height: 35px;
 body 
 {
     background-color: $base-background-color;
+
+    section.bg-color-primary-3
+    {
+        background-color: #fafafa;
+    }
     
     #preloader
     {
@@ -97,8 +102,13 @@ body
                 padding-top: 66px;
                 background-color: #ddd;
                 position: fixed;
+                // position: relative;
                 z-index: -1;
                 @include vendor-prefix(transition, padding-top 0.5s);
+
+                & > .container
+                {
+                }
             }
 
             div.notification ~ .banner-wrapper
@@ -156,7 +166,31 @@ body
 
                         div.how-step-content
                         {
-                            min-height: 180px;
+                            height: 180px;
+                        }
+                    }
+                }
+            }
+
+            div.page-mobile-app
+            {
+                div.app-types
+                {
+                    div.app-type
+                    {
+                        div.app-type-icon img
+                        {
+                            width: 30%;
+                        }
+
+                        h2 
+                        {
+                            font-size: 1.2em;
+                        }
+
+                        p
+                        {
+                            color: #999;
                         }
                     }
                 }

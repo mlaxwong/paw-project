@@ -1,0 +1,116 @@
+{{ set(this, 'title', t('app', 'Penang Mobile App Development')) }}
+
+{% set features = [
+    {
+        title: 'QR/Barcode Scanner',
+        description: null,
+        icon: 'qrcode',
+    },
+    {
+        title: 'Geo-Services',
+        description: null,
+        icon: 'map-marked',
+    },
+    {
+        title: 'Camera',
+        description: null,
+        icon: 'camera',
+    },
+    {
+        title: 'Finger Print',
+        description: null,
+        icon: 'fingerprint',
+    },
+    {
+        title: 'Vioce',
+        description: null,
+        icon: 'microphone',
+    },
+] %}
+
+{{- beginBlock('banner') -}}
+<h1>Mobile App Development</h1>
+<div class="row">
+    <p class="col-md-8 lead text-justify"> 
+        Full Mobile App Development services, from architect, design, develop and deliver mobile applications for Smartphone, Tablet and Kios Devices.
+    </p>
+</div>
+{{- endBlock() -}}
+
+<div class="page-mobile-app">
+    <section>
+        <div class="container">
+            <h1 class="display-5">Identify the problems</h1>
+            <p class="lead text-justify">
+                Everyone already know the benefit of mobile application can bring to us, just need to choose the right development on that, we developing mobile application with the help of research and understanding that stems from experience and expertise. We are providing from small app to complete solution creative and customized Android/iOS mobile application development.
+            </p>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="app-types row">
+                <div class="app-type col-md-4 text-center">
+                    <div class="app-type-icon p-5">
+                        <img class="img-fluid mx-auto" src="{{ url('@web/static/images/ios.png') }}" alt="IOS">
+                    </div>
+                    <h2>IOS App Development</h2>
+                    <p>Native IOS development</p>
+                </div>
+                <div class="app-type col-md-4 text-center">
+                    <div class="app-type-icon p-5">
+                        <img class="img-fluid mx-auto" src="{{ url('@web/static/images/android.png') }}" alt="Android">
+                    </div>
+                    <h2>Android App Development</h2>
+                    <p>Native Android development</p>
+                </div>
+                <div class="app-type col-md-4 text-center">
+                    <div class="app-type-icon p-5">
+                        <img class="img-fluid mx-auto" src="{{ url('@web/static/images/mobile.png') }}" alt="Android">
+                    </div>
+                    <h2>Cross Platform App Development</h2>
+                    <p>Web-Based app development</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-color-primary-3">
+        <div class="container">
+            <div class="col-12">
+                <div class="text-center">
+                    <h2>WANT TO DEVELOP A MOBILE APP</h2> 
+                    <p>but don't know where to start?</p>
+                    <a class="btn btn-primary rounded-0" href="{{ url(['/contact']) }}">Get Free Consultant Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h1 class="display-5">Mobile App Future</h1>
+            <p class="lead text-justify">Idea of mobile app features that can smooth your business</p>
+            <div class="py-3">
+                <div class="row">
+                    {% for feature in features %}
+                    <div class="col-md-4 mb-3">
+                        <div class="card rounded-0">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <i class="fa fa-{{ feature.icon }}"></i>
+                                </div>
+                                <div class="card-text">
+                                    {{ feature.title }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <div class="col-md-4 mb-3">
+                        <div class="row h-100 justify-content-center align-items-center">
+                            And many more ...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
