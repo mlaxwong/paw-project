@@ -43,13 +43,17 @@ const bodyScrolledClass = () => {
 bodyScrolledClass()
 
 const preloader = () => {
-  // elements
-  const $preloader = document.getElementById('preloader')
-
-  const timmer = setTimeout(() => {
-    $preloader.classList.add('hide')
-    clearTimeout(timmer)
-  }, 250)
+  let stateCheck = setInterval(() => {
+    if (document.readyState === 'complete') {
+      clearInterval(stateCheck)
+      // elements
+      const $preloader = document.getElementById('preloader')
+      const timmer = setTimeout(() => {
+        $preloader.classList.add('hide')
+        clearTimeout(timmer)
+      }, 250)
+    }
+  }, 100)
 }
 preloader()
 
@@ -66,7 +70,7 @@ const parallax = () => {
 
     $elements.forEach($element => {
       const parallaxEffectValue = $element.getAttribute('parallax') ? $element.getAttribute('parallax') : parallaxEffectDefaultValue
-      console.log(parallaxEffectValue)
+      // console.log(parallaxEffectValue)
       const elementPosition = scrollTop - $element.offsetTop
       const parallaxEffect = elementPosition * parallaxEffectValue
       const ty = parallaxEffect - elementPosition

@@ -6,7 +6,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="{{ app.language }}">
 <head>
     <meta charset="{{ app.charset }}" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="{{ url(['/static/images/favicon.png']) }}" />
+    <link rel="shortcut icon" type="image/png" href="{{ url(['/static/images/favicon.png']) }}" />
     <title>{{ fullPageTitle|e }}</title>
     {{ this.head() }}
     {{ html.csrfMetaTags() | raw }}
