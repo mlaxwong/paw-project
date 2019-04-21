@@ -1,12 +1,16 @@
 {{- beginBlock('banner') -}}
-<h1>{{ t('app', 'Website & Mobile App') }}<br /><small class="text-muted">{{ t('app', 'Design and Development') }}</small></h1>
-<p>{{ t('app', 'We provide professional custom design and development solution in Penang, Malaysia.') }}</p>
+<div itemscope itemtype="http://schema.org/Service">
+    <meta itemprop="serviceType" content="Website & Mobile App Development">
+    <h1 class="p-0 m-0">{{ t('app', 'Website & Mobile App Development') }}</h1>
+    <h2 class="p-0 mb-3"><small class="text-muted">{{ t('app', 'All-In-one Design and Development Solution') }}</small></h2>
+    <p>{{ t('app', 'We provide professional custom design and development solution in Penang, Malaysia.') }}</p>
+</div>
 {{- endBlock() -}}
 <section class="section-services">
     <div class="website" parallax="0.95">
         <div class="container py-5" itemscope itemtype="http://schema.org/Service">
             <meta itemprop="serviceType" content="Website Design & Development">
-            <h1 class="display-5">{{ t('app', 'Website Design & Development')|raw }}</h1>
+            <h2 class="display-5">{{ t('app', 'Website Design & Development')|raw }}</h2>
             <p class="lead">
                 {{ t('app', 'Advance custom website design and development service.') }}    
             </p>
@@ -16,7 +20,7 @@
     <div class="mobile-app" parallax="0.8">
         <div class="container py-5 text-right" itemscope itemtype="http://schema.org/Service">
             <meta itemprop="serviceType" content="Mobile Apps Development">
-            <h1 class="display-5">{{ t('app', 'Mobile Apps Development') }}</h1>
+            <h2 class="display-5">{{ t('app', 'Mobile Apps Development') }}</h2>
             <p class="lead">
                 {{ t('app', 'Full-cycle Android & IOS development services.') }}
             </p>
@@ -26,7 +30,7 @@
     <div class="hosting" parallax="0.75">
         <div class="container py-5" itemscope itemtype="http://schema.org/Service">
             <meta itemprop="serviceType" content="Shared Hosting">
-            <h1 class="display-5">{{ t('app', 'Shared Hosting') }}</h1>
+            <h2 class="display-5">{{ t('app', 'Shared Hosting') }}</h2>
             <p class="lead">
                 {{ t('app', 'Easy and affordable shared hosting.<br />
                 Starting at only <b>{price}</b>', {price: 'RM15.00/mo'})|raw }}

@@ -76,23 +76,23 @@ body
             left: 50%;
             @include vendor-prefix(transform, translate(-50%, -50%));
 
-            polygon:nth-child(5), polygon:nth-child(4), polygon:nth-child(3) 
+            polygon:nth-child(4), polygon:nth-child(3), polygon:nth-child(2) 
             {
                 opacity: 0;
-            }
-
-            polygon:nth-child(5) 
-            {
-                animation: draw 1s forwards; 
             }
 
             polygon:nth-child(4) 
             {
                 animation: draw 1s forwards; 
-                animation-delay: 0.5s;
             }
 
             polygon:nth-child(3) 
+            {
+                animation: draw 1s forwards; 
+                animation-delay: 0.5s;
+            }
+
+            polygon:nth-child(2) 
             {
                 animation: draw 1s forwards; 
                 animation-delay: 0.8s;
