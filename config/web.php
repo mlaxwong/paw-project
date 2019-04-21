@@ -2,16 +2,20 @@
 return [
     'layoutPath' => '@app/views/_layouts',
     // 'layout' =>'@app/views/_layouts/main.twig',
+    'bootstrap' => ['globalContactForm'],
     'modules' => [
         'admin' => paw\cp\Module::class,
-        'test' => app\modules\site\Module::class
+        'test' => app\modules\site\Module::class,
     ],
     'components' => [
+        'globalContactForm' => [
+            'class' => app\components\GlobalContactForm::class,
+        ],
         'assetManager' => [
             'linkAssets' => true,
         ],
         'request' => [
-            'cookieValidationKey' => 'k1224gG8jzgLGVP0Psvt3I-s8_3OvWdd'
+            'cookieValidationKey' => 'k1224gG8jzgLGVP0Psvt3I-s8_3OvWdd',
         ],
         'view' => [
             'theme' => [
@@ -46,6 +50,11 @@ return [
                         },
                         'endBlock' => function () {
                             \app\widgets\Block::end();
+                        },
+                    ],
+                    'filters' => [
+                        't' => function ($message, $category = 'app', $params = []) {
+                            return Yii::t($category, $message, $params);
                         }
                     ],
                     'uses' => ['yii\bootstrap'],

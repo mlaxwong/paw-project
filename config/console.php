@@ -1,2 +1,8 @@
 <?php
-return [];
+return [
+    'controllerMap' => [
+        'migrate' => [
+            'migrationPath' => '@root/migrations',
+        ],
+    ],
+];

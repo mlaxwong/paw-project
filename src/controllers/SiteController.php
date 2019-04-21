@@ -1,7 +1,6 @@
 <?php
 namespace app\controllers;
 
-use Yii;
 use yii\web\Controller;
 
 class SiteController extends Controller
@@ -14,11 +13,11 @@ class SiteController extends Controller
         // $first->save();
         // echo '<pre>';
         // print_r(Yii::$app->resource->get('product')->all());
-            // foreach (Yii::$app->resource->get('product')->all() as $product)
-            // {
-            //     print_r($product->attributes);
-            // }
-            // die;
+        // foreach (Yii::$app->resource->get('product')->all() as $product)
+        // {
+        //     print_r($product->attributes);
+        // }
+        // die;
         // echo \paw\cp\collections\Product::find()->one()->id;
         // $model = new \paw\cp\collections\Product;
         // $model->save();
@@ -29,7 +28,7 @@ class SiteController extends Controller
         // echo '<pre>';
         // print_r($products);
         // print_r($resources->dataProvider->pagination->page);
-        // die;    
+        // die;
         return $this->render('index');
     }
 
@@ -51,5 +50,10 @@ class SiteController extends Controller
     public function actionContact()
     {
         return $this->render('contact');
+    }
+
+    public function actionThankYou()
+    {
+        return $this->render('thank-you');
     }
 }

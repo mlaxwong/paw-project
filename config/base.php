@@ -7,6 +7,10 @@ return [
         '@runtime' => PATH_ROOT . '/runtime',
     ],
     'components' => [
+        'mailer' => [
+            'class' => yii\swiftmailer\Mailer::class,
+            'viewPath' => '@root/src/mail',
+        ],
         'db' => [
             'class' => yii\db\Connection::class,
             'dsn' => env('DB_DSN', 'mysql:host=localhost;port=3306;dbname=database_v1'),
@@ -19,8 +23,8 @@ return [
         'resource' => [
             'class' => paw\services\Resource::class,
             'namespaces' => [
-                'paw\\cp\\resources'
+                'paw\\cp\\resources',
             ],
-        ]
+        ],
     ],
 ];
