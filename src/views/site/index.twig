@@ -4,8 +4,9 @@
 {{- endBlock() -}}
 <section class="section-services">
     <div class="website" parallax="0.95">
-        <div class="container py-5">
-            <h1 class="display-5">{{ t('app', 'Website <br />Design & Development')|raw }}</h1>
+        <div class="container py-5" itemscope itemtype="http://schema.org/Service">
+            <meta itemprop="serviceType" content="Website Design & Development">
+            <h1 class="display-5">{{ t('app', 'Website Design & Development')|raw }}</h1>
             <p class="lead">
                 {{ t('app', 'Advance custom website design and development service.') }}    
             </p>
@@ -13,8 +14,9 @@
         </div>
     </div>
     <div class="mobile-app" parallax="0.8">
-        <div class="container py-5 text-right">
-            <h1 class="display-5">{{ t('app', 'Mobile Apps') }}</h1>
+        <div class="container py-5 text-right" itemscope itemtype="http://schema.org/Service">
+            <meta itemprop="serviceType" content="Mobile Apps Development">
+            <h1 class="display-5">{{ t('app', 'Mobile Apps Development') }}</h1>
             <p class="lead">
                 {{ t('app', 'Full-cycle Android & IOS development services.') }}
             </p>
@@ -22,7 +24,8 @@
         </div>
     </div>
     <div class="hosting" parallax="0.75">
-        <div class="container py-5">
+        <div class="container py-5" itemscope itemtype="http://schema.org/Service">
+            <meta itemprop="serviceType" content="Shared Hosting">
             <h1 class="display-5">{{ t('app', 'Shared Hosting') }}</h1>
             <p class="lead">
                 {{ t('app', 'Easy and affordable shared hosting.<br />

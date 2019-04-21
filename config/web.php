@@ -17,6 +17,9 @@ return [
         'request' => [
             'cookieValidationKey' => 'k1224gG8jzgLGVP0Psvt3I-s8_3OvWdd',
         ],
+        'errorHandler' => [
+            'errorAction' => 'site/error',
+        ],
         'view' => [
             'theme' => [
                 'asset' => \app\assets\AppAsset::class,

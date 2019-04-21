@@ -5,6 +5,14 @@ use yii\web\Controller;
 
 class SiteController extends Controller
 {
+    public function actions()
+    {
+        return [
+            'error' => [
+                'class' => \yii\web\ErrorAction::class,
+            ],
+        ];
+    }
     public function actionIndex($handle = null)
     {
         // $first = \paw\cp\collections\Product::find()->having(['title' => 'asd'])->one();

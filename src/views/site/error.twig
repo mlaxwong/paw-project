@@ -1,0 +1,12 @@
+{{ set(this, 'title', name) }}
+
+{{ beginBlock('section-contact') }}{{ endBlock() }}
+<div class="page-error">
+    <section>
+        <div class="container">
+            <h2>{{ name }}</h2>
+            <p>{{ html.encode(message) }}</p>
+            <a href="{{ url(['/']) }}" class="btn btn-primary">{{ 'Back to Home Page'|t('app') }}</a>
+        </div>
+    </section>
+</div>
