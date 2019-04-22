@@ -4,8 +4,8 @@ return [
     // 'layout' =>'@app/views/_layouts/main.twig',
     'bootstrap' => ['globalContactForm'],
     'modules' => [
-        'admin' => paw\cp\Module::class,
-        'test' => app\modules\site\Module::class,
+        // 'admin' => paw\cp\Module::class,
+        // 'test' => app\modules\site\Module::class,
     ],
     'components' => [
         'globalContactForm' => [
@@ -35,6 +35,7 @@ return [
                     'extensions' => YII_DEBUG ? ['\Twig_Extension_Debug'] : [],
                     'globals' => [
                         'html' => ['class' => \yii\helpers\Html::class],
+                        'url' => ['class' => \yii\helpers\Url::class],
                         'string' => ['class' => \paw\helpers\StringHelper::class],
                     ],
                     'functions' => [
@@ -70,9 +71,29 @@ return [
                 // '<action:^((?!admin)(?!test))[\w-\/]+>' => 'site/<action>',
                 // '<controller:^((?!admin)(?!test))[\w-\/]+>/<action>' => '<controller>/index',
                 // '<module:^((?!admin)(?!test))[\w-\/]+>/<controller>/<action>' => 'site/index',
-
+                [
+                    'pattern' => '/',
+                    'route' => 'site/index',
+                ],
+                [
+                    'pattern' => '/website',
+                    'route' => 'site/website',
+                ],
+                [
+                    'pattern' => '/mobile-app',
+                    'route' => 'site/mobile-app',
+                ],
+                [
+                    'pattern' => '/hosting',
+                    'route' => 'site/hosting',
+                ],
+                [
+                    'pattern' => '/contact',
+                    'route' => 'site/contact',
+                ],
                 '<action^((?!admin)(?!test))[\w-]+>' => 'site/<action>',
                 '<controller>/<action>' => '<controller>/<action>',
+                '<controller>/<action:()>' => 'site/<controller>',
                 '<module>/<controller>/<action>' => '<module>/<controller>/<action>',
 
             ],
