@@ -19,7 +19,7 @@ class GlobalContactForm extends Component implements BootstrapInterface
                     'html' => 'contact/interest-html',
                     'text' => 'contact/interest-text',
                 ], ['model' => $model])
-                    ->setFrom('no-reply@trinalusion.com')
+                    ->setFrom('no-reply@trinalusion.my')
                     ->setTo('mlaxwong@gmail.com')
                     ->setSubject($model->name . ' | Trinalusion Contact Form')
                     ->send();
@@ -34,7 +34,7 @@ class GlobalContactForm extends Component implements BootstrapInterface
         //         'html' => 'contact/interest-html',
         //         'text' => 'contact/interest-text',
         //     ], ['model' => []])
-        //         ->setFrom('no-reply@trinalusion.com')
+        //         ->setFrom('no-reply@trinalusion.my')
         //         ->setTo('mlaxwong@gmail.com')
         //         ->setSubject('Contact Form')
         //         ->send();
